@@ -15,6 +15,8 @@
     --milky: #E5E1D8;
 
     --gap: 20px;
+
+    --nav-size: 80px;
 }
 
 *, *::before, *::after {
@@ -26,6 +28,10 @@
 html {
     font-size: 20px;
     font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    padding-top: var(--nav-size);
 }
 
 h1 {
@@ -46,13 +52,18 @@ a {
     align-items: center;
     justify-content: space-between;
 
-    background-color: var(--black);
-
-    padding: calc(var(--gap) / 2) var(--gap);
-
-    position: fixed;
+    
     width: 100%;
+    height: var(--nav-size);
+    
+    padding: calc(var(--gap) / 2) var(--gap);
+    
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
 
+    background-color: var(--black);
     user-select: none;
 }
 
