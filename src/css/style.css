@@ -1,91 +1,201 @@
 @import url(https://fonts.googleapis.com/css?family=Montserrat:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
 
 :root {
-    --white: #FFFFFF;
-    --black: #232323;
+  scroll-behavior: smooth;
 
-    --green: #C2DC49;
-    --dark-green: #3C6628;
-    --green-transparent: rgba(var(--green), 0.4);
+  --white: #ffffff;
+  --black: #232323;
 
-    --gray: #C4C4C4;
-    --gray-second: #8A8A8A;
-    --dark-gray: #636363;
+  --green: #c2dc49;
+  --dark-green: #3c6628;
+  --green-transparent: rgba(var(--green), 0.4);
 
-    --milky: #E5E1D8;
+  --gray: #c4c4c4;
+  --gray-second: #8a8a8a;
+  --dark-gray: #636363;
 
-    --gap: 20px;
+  --milky: #e5e1d8;
 
-    --nav-size: 80px;
+  --gap: 20px;
+  --nav-size: 80px;
 }
 
-*, *::before, *::after {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 html {
-    font-size: 20px;
-    font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+  font-family: "Montserrat", sans-serif;
 }
 
 body {
-    padding-top: var(--nav-size);
+  padding-top: var(--nav-size);
 }
 
 h1 {
-    font-size: 50px;
+  font-size: 50px;
 }
 
 ul {
-    list-style-type: none;
+  list-style-type: none;
 }
 
 a {
-    text-decoration: none;
-    color: unset;
+  text-decoration: none;
+  color: unset;
 }
 
 .header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 
-    
-    width: 100%;
-    height: var(--nav-size);
-    
-    padding: calc(var(--gap) / 2) var(--gap);
-    
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 1000;
+  width: 100%;
+  height: var(--nav-size);
 
-    background-color: var(--black);
-    user-select: none;
+  padding: calc(var(--gap) / 2) var(--gap);
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+
+  background-color: var(--black);
+  user-select: none;
 }
 
 .nav {
-    display: flex;
-    column-gap: var(--gap);
+  display: flex;
+  column-gap: var(--gap);
 }
 
 .nav__link {
-    color: var(--white);
-    transition: text-shadow 0.2s ease-in-out, transform 0.2s ease-in-out;
+  color: var(--white);
+  transition: text-shadow 0.2s ease-in-out, transform 0.2s ease-in-out;
 
-    &:hover {
-        text-shadow: 0 0 7px var(--white);
-        transform: scale(1.05);
-    }
+  &:hover {
+    text-shadow: 0 0 7px var(--white);
+    transform: scale(1.05);
+  }
 }
 
 .demo__video {
-    width: 100%;
-    height: 80dvh;
+  width: 100%;
+  height: 80dvh;
 
-    object-fit: cover;
-    object-position: center;
+  object-fit: cover;
+  object-position: center;
+}
+
+.character {
+  display: flex;
+  width: 100%;
+  height: 100dvh;
+
+  background: url("../img/images/section2-bg.png") center / cover no-repeat;
+}
+
+.character__img {
+  text-align: center;
+  position: relative;
+
+  &>img {
+    height: 100%;
+  }
+
+  &>figcaption {
+    --radius: 20px;
+
+    width: 100%;
+
+    position: absolute;
+    bottom: 0;
+
+    font-size: 16px;
+    font-style: italic;
+
+    background-color: var(--black);
+    color: var(--white);
+
+    padding-block: 30px;
+
+    border-radius: var(--radius) var(--radius) 0 0;
+  }
+}
+
+.character__info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  &>header {
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+
+    &>h2 {
+      font-size: 40px;
+    }
+
+    &>h3 {
+      color: var(--dark-gray);
+    }
+  }
+
+  &>section {
+
+    &>p {
+      font-weight: 600;
+      color: var(--black);
+
+      &>mark {
+        background-color: var(--green);
+      }
+    }
+
+    &>details {
+
+      &>summary {
+        list-style: none;
+
+        color: var(--dark-green);
+        transition: color 0.2s ease;
+
+        cursor: pointer;
+
+        &:hover {
+          color: var(--green);
+        }
+      }
+    }
+  }
+
+  &>footer {
+    &>p {
+      font-style: italic;
+      font-weight: 700;
+      color: var(--black);
+      justify-self: flex-end;
+    }
+  }
+}
+
+.character__additional {
+  width: 75%;
+
+  background-color: var(--black);
+  color: var(--white);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.character__content {
+  font-size: 20px;
 }
