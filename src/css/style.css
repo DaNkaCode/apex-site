@@ -139,17 +139,25 @@ a {
   }
 
   & > section {
+
     & > p {
       font-weight: 600;
       color: var(--black);
+
+      & > mark {
+        background-color: var(--green);
+      }
     }
 
     & > details {
+
       & > summary {
         list-style: none;
 
         color: var(--dark-green);
         transition: color 0.2s ease;
+
+        cursor: pointer;
 
         &:hover {
           color: var(--green);
@@ -169,5 +177,16 @@ a {
 }
 
 .character__additional {
-    background-color: var(--black);
+  width: 75%;
+
+  background-color: var(--black);
+  color: var(--white);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.character__content {
+  font-size: 20px;
 }
