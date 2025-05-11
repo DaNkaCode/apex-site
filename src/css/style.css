@@ -237,7 +237,6 @@ img {
   white-space: nowrap;
 }
 
-
 .skills {
   background: url("../img/images/section3-bg.png") center/cover no-repeat;
   min-height: 40dvh;
@@ -296,6 +295,92 @@ img {
 }
 
 /* Skills end */
+
+/* Special start */
+.special {
+  background-color: var(--milky);
+
+  &>article {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap);
+
+    max-width: 1200px;
+    margin-inline: auto;
+    padding-block: var(--gap);
+
+    &>header {
+      display: flex;
+      flex-direction: column;
+      gap: var(--gap);
+
+      &>h2.special__title {
+        text-align: center;
+        font-size: 45px;
+      }
+
+      &>h3.special__subtitle {
+        text-align: center;
+        font-size: 25px;
+        color: var(--gray-second);
+      }
+
+      &>figure.special__img {
+        text-align: center;
+
+        &>.special__img-src {
+          width: fit-content;
+          margin-inline: auto;
+        }
+
+        &>.special__img-text {
+          font-style: italic;
+        }
+      }
+    }
+
+    &>main {
+      display: flex;
+      flex-direction: column;
+      gap: var(--gap);
+      font-style: italic;
+
+      &>ul {
+        list-style: disc;
+
+        padding-left: 15px;
+      }
+
+      &>hr {
+        border: none;
+        height: 3px;
+        background-color: var(--gray-second);
+      }
+    }
+
+    &>footer {
+      display: flex;
+      flex-direction: column;
+      gap: var(--gap);
+
+      font-style: italic;
+
+      &>p:nth-of-type(4) {
+        color: var(--gray-second);
+      }
+
+      &>p:nth-of-type(5) {
+        color: var(--gray-second);
+      }
+
+      &>p>span {
+        background-color: var(--green);
+      }
+    }
+  }
+}
+
+/* Special end */
 
 /* Media start */
 @media screen and (max-width: 810px) {
