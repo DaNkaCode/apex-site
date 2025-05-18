@@ -382,6 +382,30 @@ img {
 
 /* Special end */
 
+.footer {
+  background-color: var(--black);
+  color: var(--white);
+
+  padding-block: 100px;
+}
+
+.footer__content {
+  /* display: flex; */
+
+  width: 100%;
+}
+
+.footer__text {
+  text-align: center;
+
+  margin-bottom: 100px;
+}
+
+.footer__icons {
+  width: fit-content;
+  margin-inline: auto;
+}
+
 /* Media start */
 @media screen and (max-width: 810px) {
   .skills__content {
